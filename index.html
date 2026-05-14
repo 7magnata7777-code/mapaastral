@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<title>Mapa Astral Proibido</title>
+
+<meta name="description" content="Descubra os segredos ocultos do seu mapa astral sobre dinheiro, desejo, poder e relacionamentos.">
+<meta name="keywords" content="mapa astral, astrologia, signos, sedução, riqueza, poder">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+font-family:Arial, Helvetica, sans-serif;
+background:#050505;
+color:#fff;
+overflow-x:hidden;
+}
+
+/* FUNDO */
+
+.bg{
+position:fixed;
+inset:0;
+z-index:-2;
+
+background:
+radial-gradient(circle at top, rgba(255,215,0,.18), transparent 30%),
+radial-gradient(circle at bottom, rgba(162,0,255,.18), transparent 35%),
+#050505;
+}
+
+.stars{
+position:fixed;
+inset:0;
+z-index:-1;
+background-image:
+radial-gradient(white 1px, transparent 1px);
+background-size:40px 40px;
+opacity:.12;
+animation:starsMove 70s linear infinite;
+}
+
+@keyframes starsMove{
+from{
+transform:translateY(0);
+}
+to{
+transform:translateY(-250px);
+}
+}
+
+.container{
+width:90%;
+max-width:1200px;
+margin:auto;
+}
+
+/* HERO */
+
+.hero{
+min-height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:120px 0;
+position:relative;
+}
+
+.hero::before{
+content:'';
+position:absolute;
+width:650px;
+height:650px;
+background:rgba(255,215,0,.08);
+filter:blur(130px);
+border-radius:50%;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+}
+
+.tag{
+display:inline-block;
+padding:12px 24px;
+border-radius:100px;
+border:1px solid rgba(255,215,0,.35);
+background:rgba(255,215,0,.06);
+color:#ffd700;
+font-size:13px;
+font-weight:bold;
+letter-spacing:2px;
+margin-bottom:35px;
+}
+
+h1{
+font-size:95px;
+line-height:.9;
+text-transform:uppercase;
+font-weight:900;
+margin-bottom:30px;
+
+background:linear-gradient(
+90deg,
+#fff,
+#ffd700,
+#fff
+);
+
+background-size:300%;
+
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+
+animation:shine 5s linear infinite;
+}
+
+@keyframes shine{
+0%{
+background-position:0%;
+}
+100%{
+background-position:300%;
+}
+}
+
+.subtitle{
+font-size:28px;
+line-height:1.7;
+color:#dadada;
+max-width:850px;
+margin:auto;
+margin-bottom:40px;
+}
+
+.highlight{
+color:#ffd700;
+font-weight:bold;
+}
+
+.impact{
+max-width:850px;
+margin:0 auto 45px;
+
+padding:35px;
+
+border-radius:30px;
+
+background:
+linear-gradient(
+145deg,
+rgba(255,215,0,.08),
+rgba(255,255,255,.03)
+);
+
+border:1px solid rgba(255,215,0,.22);
+
+font-size:24px;
+line-height:1.8;
+color:#f1f1f1;
+}
+
+.buttons{
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+}
+
+.btn{
+padding:22px 42px;
+border-radius:18px;
+text-decoration:none;
+font-weight:900;
+transition:.35s;
+display:inline-block;
+text-transform:uppercase;
+letter-spacing:1px;
+}
+
+.btn-primary{
+background:linear-gradient(
+90deg,
+#ffd700,
+#ffae00
+);
+
+color:#000;
+
+box-shadow:
+0 0 30px rgba(255,215,0,.35);
+
+animation:pulse 2s infinite;
+}
+
+.btn-primary:hover{
+transform:translateY(-6px) scale(1.03);
+box-shadow:
+0 0 60px rgba(255,215,0,.55);
+}
+
+.btn-secondary{
+background:rgba(255,255,255,.04);
+border:1px solid rgba(255,255,255,.12);
+color:#fff;
+}
+
+.btn-secondary:hover{
+background:rgba(255,255,255,.08);
+transform:translateY(-4px);
+}
+
+@keyframes pulse{
+0%{
+box-shadow:0 0 0 0 rgba(255,215,0,.5);
+}
+70%{
+box-shadow:0 0 0 25px rgba(255,215,0,0);
+}
+100%{
+box-shadow:0 0 0 0 rgba(255,215,0,0);
+}
+}
+
+/* SECTIONS */
+
+section{
+padding:110px 0;
+}
+
+.section-title{
+text-align:center;
+font-size:58px;
+margin-bottom:20px;
+color:#ffd700;
+font-weight:900;
+text-transform:uppercase;
+}
+
+.section-subtitle{
+text-align:center;
+max-width:850px;
+margin:0 auto 70px;
+color:#cfcfcf;
+line-height:1.8;
+font-size:20px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:35px;
+}
+
+.card{
+padding:40px;
+border-radius:30px;
+
+background:
+linear-gradient(
+145deg,
+rgba(255,255,255,.05),
+rgba(255,255,255,.02)
+);
+
+border:1px solid rgba(255,255,255,.08);
+
+transition:.35s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+border-color:#ffd700;
+box-shadow:
+0 0 40px rgba(255,215,0,.12);
+}
+
+.card h3{
+font-size:30px;
+margin-bottom:20px;
+color:#ffd700;
+}
+
+.card p{
+line-height:1.9;
+color:#ddd;
+font-size:18px;
+}
+
+/* MOCKUP */
+
+.mockup{
+text-align:center;
+margin-top:60px;
+}
+
+.mockup img{
+max-width:320px;
+width:100%;
+filter:
+drop-shadow(0 0 35px rgba(255,215,0,.25));
+}
+
+/* PREÇO */
+
+.price-box{
+max-width:760px;
+margin:auto;
+
+padding:60px 40px;
+
+border-radius:35px;
+
+background:
+linear-gradient(
+145deg,
+rgba(255,215,0,.12),
+rgba(255,255,255,.03)
+);
+
+border:1px solid rgba(255,215,0,.22);
+
+text-align:center;
+}
+
+.old-price{
+font-size:28px;
+text-decoration:line-through;
+color:#888;
+margin-bottom:15px;
+}
+
+.new-price{
+font-size:92px;
+font-weight:900;
+color:#ffd700;
+margin-bottom:20px;
+
+text-shadow:
+0 0 25px rgba(255,215,0,.45);
+}
+
+.price-text{
+font-size:21px;
+color:#ddd;
+margin-bottom:35px;
+}
+
+.bonus-list{
+margin-top:35px;
+line-height:2.2;
+font-size:19px;
+color:#ddd;
+}
+
+.urgency{
+margin-top:25px;
+color:#ff6b6b;
+font-weight:bold;
+font-size:17px;
+}
+
+/* DEPOIMENTOS */
+
+.testimonial{
+font-style:italic;
+margin-bottom:20px;
+}
+
+.author{
+color:#ffd700;
+font-weight:bold;
+}
+
+/* FOOTER */
+
+footer{
+padding:60px 0;
+text-align:center;
+color:#777;
+border-top:1px solid rgba(255,255,255,.06);
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+h1{
+font-size:56px;
+}
+
+.subtitle{
+font-size:21px;
+}
+
+.impact{
+font-size:19px;
+padding:28px;
+}
+
+.section-title{
+font-size:38px;
+}
+
+.new-price{
+font-size:58px;
+}
+
+.price-box{
+padding:40px 25px;
+}
+
+}
+
+@media(max-width:480px){
+
+.hero{
+padding-top:140px;
+}
+
+h1{
+font-size:42px;
+}
+
+.btn{
+width:100%;
+}
+
+.section-title{
+font-size:30px;
+}
+
+.subtitle{
+font-size:18px;
+}
+
+}
+
+</style>
+</head>
+<body>
+
+<div class="bg"></div>
+<div class="stars"></div>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="container">
+
+<div class="tag">
+⚡ ASTROLOGIA PROIBIDA • PODER • SEGREDOS
+</div>
+
+<h1>
+MAPA<br>
+ASTRAL<br>
+PROIBIDO
+</h1>
+
+<p class="subtitle">
+Descubra os segredos ocultos do seu signo sobre
+<span class="highlight">
+dinheiro, desejo, manipulação e poder.
+</span>
+</p>
+
+<div class="impact">
+“Enquanto algumas pessoas vivem no automático…
+existem outras usando o próprio mapa astral para dominar relacionamentos, dinheiro e decisões.”
+</div>
+
+<div class="buttons">
+
+<a href="https://SEU-CHECKOUT.com" class="btn btn-primary">
+QUERO DESBLOQUEAR MEU DESTINO
+</a>
+
+<a href="https://SEU-CHECKOUT.com" class="btn btn-secondary">
+ACESSAR AGORA
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- O QUE TEM DENTRO -->
+
+<section>
+
+<div class="container">
+
+<h2 class="section-title">
+O QUE VOCÊ VAI DESCOBRIR
+</h2>
+
+<p class="section-subtitle">
+Um conteúdo intenso sobre astrologia, comportamento, riqueza,
+energia sexual, sedução e poder oculto.
+</p>
+
+<div class="grid">
+
+<div class="card">
+
+<h3>💰 DINHEIRO</h3>
+
+<p>
+Descubra quais padrões emocionais estão sabotando sua prosperidade e aprenda como usar sua energia astral para expansão financeira.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>🔥 SEDUÇÃO</h3>
+
+<p>
+Conheça o lado mais intenso, obscuro e irresistível dos signos no amor, desejo e obsessão.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>🧠 PODER</h3>
+
+<p>
+Aprenda como usar suas forças ocultas para dominar ambientes, decisões e relacionamentos.
+</p>
+
+</div>
+
+</div>
+
+<div class="mockup">
+
+<img src="https://i.imgur.com/YOURBOOK.png" alt="Ebook Mapa Astral">
+
+</div>
+
+</div>
+
+</section>
+
+<!-- BÔNUS -->
+
+<section>
+
+<div class="container">
+
+<h2 class="section-title">
+BÔNUS SECRETOS
+</h2>
+
+<p class="section-subtitle">
+Além do ebook principal, você recebe materiais extras exclusivos.
+</p>
+
+<div class="grid">
+
+<div class="card">
+
+<h3>⚠️ PDF EXTRA</h3>
+
+<p>
+Os signos mais perigosos no amor e na manipulação emocional.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>🌌 TESTE ASTRAL</h3>
+
+<p>
+Descubra qual energia está sabotando sua vida.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>🎧 ÁUDIO PREMIUM</h3>
+
+<p>
+Experiência energética exclusiva para elevar sua vibração.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- DEPOIMENTOS -->
+
+<section>
+
+<div class="container">
+
+<h2 class="section-title">
+QUEM LEU RECOMENDA
+</h2>
+
+<div class="grid">
+
+<div class="card">
+
+<p class="testimonial">
+“Foi assustadoramente preciso. Descobri padrões que travavam minha vida financeira.”
+</p>
+
+<p class="author">
+— Mariana, 29 anos
+</p>
+
+</div>
+
+<div class="card">
+
+<p class="testimonial">
+“O conteúdo sobre poder pessoal mudou completamente minha forma de agir.”
+</p>
+
+<p class="author">
+— Rafael, 34 anos
+</p>
+
+</div>
+
+<div class="card">
+
+<p class="testimonial">
+“Nunca vi astrologia explicada desse jeito. Parece proibido mesmo.”
+</p>
+
+<p class="author">
+— Camila, 26 anos
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- OFERTA -->
+
+<section>
+
+<div class="container">
+
+<div class="price-box">
+
+<div class="old-price">
+DE R$97,00
+</div>
+
+<div class="new-price">
+R$19,90
+</div>
+
+<p class="price-text">
+Acesso imediato ao ebook completo + bônus secretos.
+</p>
+
+<a href="https://SEU-CHECKOUT.com" class="btn btn-primary">
+GARANTIR MEU ACESSO AGORA
+</a>
+
+<div class="bonus-list">
+
+✅ Download imediato <br>
+✅ Acesso vitalício <br>
+✅ Compatível com celular <br>
+✅ Leitura instantânea <br>
+✅ Atualizações futuras
+
+</div>
+
+<div class="urgency">
+⚠️ Oferta promocional pode sair do ar a qualquer momento.
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- CTA FINAL -->
+
+<section>
+
+<div class="container">
+
+<div class="price-box">
+
+<h2 class="section-title">
+VOCÊ ESTÁ PRONTO?
+</h2>
+
+<p class="section-subtitle">
+Talvez o que esteja travando sua vida emocional,
+amorosa e financeira esteja escrito no seu mapa astral.
+</p>
+
+<a href="https://SEU-CHECKOUT.com" class="btn btn-primary">
+QUERO ACESSAR O MAPA ASTRAL PROIBIDO
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+© 2026 • MAPA ASTRAL PROIBIDO — TODOS OS DIREITOS RESERVADOS
+</footer>
+
+<script>
+
+const elements = document.querySelectorAll('.card,.price-box,.hero');
+
+const observer = new IntersectionObserver(entries=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+entry.target.style.opacity='1';
+entry.target.style.transform='translateY(0)';
+
+}
+
+});
+
+});
+
+elements.forEach(el=>{
+
+el.style.opacity='0';
+el.style.transform='translateY(40px)';
+el.style.transition='all .8s ease';
+
+observer.observe(el);
+
+});
+
+</script>
+
+</body>
+</html>
